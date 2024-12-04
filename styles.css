@@ -57,6 +57,11 @@ nav ul li:not(:last-child) {
     border-right: 2px solid #000000; /* Agrega línea vertical a la derecha de los elementos */
 }
 
+.about{
+    margin : 3% 6.5%;
+    text-align: justify;
+}
+
 .products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -88,4 +93,71 @@ nav ul li:not(:last-child) {
 .product p {
     font-size: 1rem;
     color: #777;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre las columnas */
+    align-items: center; /* Alinea todo verticalmente */
+    background-color: #e0e0e0; /* Fondo gris claro como el de tu imagen */
+    padding: 10px 0;
+  }
+  
+  .redes {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro de cada div .redes */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .img img {
+    width: 24px; /* Ajusta el tamaño de los íconos */
+    height: 24px;
+  }
+  
+  .texto1, .texto2 {
+    font-size: 14px; /* Tamaño del texto */
+    color: #000; /* Color negro */
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduce tamaño del título */
+    }
+
+    nav ul {
+        flex-direction: column; /* Coloca los elementos del menú en una columna */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado vertical */
+        border-right: none; /* Quita línea divisoria vertical */
+    }
+
+    .products {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .product h2 {
+        font-size: 1.2rem;
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+
+    .contacto {
+        flex-direction: column; /* Organiza los elementos verticalmente */
+    }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+
+    .contacto {
+        justify-content: space-around; /* Espaciado horizontal entre columnas */
+    }
 }
